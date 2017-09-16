@@ -11,8 +11,7 @@ git remote set-url origin https://linhtvdev@github.com/linhtvdev/LearnPython.git
 git remote show origin   // xem ten remote
 git remote  // xem thong tin remote --> co ten hien tai la origin (mac dinh)
 git remote -v  // xem url cua remote hien tai
-git remote add SharePyThon https://github.com/linhtvdev/LearnPython.git
 git add *
 git commit -m "add 2 files"
 git push
-git push -f origin master // them option -f de ep buoc ... neu phat sinh loi
+git push -f (NLP master) // them option -f de ep buoc ... neu phat sinh loi
