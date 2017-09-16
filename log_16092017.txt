@@ -1,0 +1,209 @@
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git int
+git: 'int' is not a git command. See 'git --help'.
+
+Did you mean this?
+        init
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git init
+Initialized empty Git repository in D:/3-Git/KHMT/.git/
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git config user.name "MCS Ninh Thuan"
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git config user.email "khmt.ninhthuan@gmail.com"
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git remote set-url https://github.com/khmtnt/NLP.git
+usage: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    --push                manipulate push URLs
+    --add                 add URL
+    --delete              delete URLs
+
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git remote set-url origin https://github.com/khmtnt/NLP.git
+fatal: No such remote 'origin'
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git remote
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git remote -v
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git clone https://github.com/khmtnt/NLP.git
+Cloning into 'NLP'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git remote
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git remote -v
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git remote set-url origin https://github.com/khmtnt/NLP.git
+fatal: No such remote 'origin'
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git remote set-url origin https://khmtnt@github.com/khmtnt/NLP.git
+fatal: No such remote 'origin'
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        NLP/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git config --list
+core.symlinks=false
+core.autocrlf=true
+core.fscache=true
+color.diff=auto
+color.status=auto
+color.branch=auto
+color.interactive=true
+help.format=html
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+diff.astextplain.textconv=astextplain
+rebase.autosquash=true
+credential.helper=manager
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+user.name=MCS Ninh Thuan
+user.email=khmt.ninhthuan@gmail.com
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ touch test.txt
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git add *
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   NLP
+        new file:   test.txt
+
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git commit -m "add 2 files"
+[master (root-commit) bd41074] add 2 files
+ 2 files changed, 1 insertion(+)
+ create mode 160000 NLP
+ create mode 100644 test.txt
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git remote add origin https://github.com/khmtnt/NLP.git
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git remote -v
+origin  https://github.com/khmtnt/NLP.git (fetch)
+origin  https://github.com/khmtnt/NLP.git (push)
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git push --set-upstream orgin master
+fatal: 'orgin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git push --set-upstream origin master
+To https://github.com/khmtnt/NLP.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/khmtnt/NLP.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git push -u origin master
+To https://github.com/khmtnt/NLP.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/khmtnt/NLP.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git pull
+warning: no common commits
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/khmtnt/NLP
+ * [new branch]      master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git pull origin master
+From https://github.com/khmtnt/NLP
+ * branch            master     -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$ git push -f origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 251 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/khmtnt/NLP.git
+ + 0424a92...bd41074 master -> master (forced update)
+
+MyPC@GV3 MINGW64 /d/3-Git/KHMT (master)
+$

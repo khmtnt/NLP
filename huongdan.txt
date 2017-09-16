@@ -1,0 +1,18 @@
+cd d:
+cd 3-Git
+cd KHMT
+git clone https://github.com/khmtnt/NLP.git
+cd NLP
+git init
+git config user.name "MCS Ninh Thuan"
+git config user.email "khmt.ninhthuan@gmail.com"
+git remote add NLP https://github.com/khmtnt/NLP.git  //dat lai ten repo server la NLP
+git remote set-url origin https://linhtvdev@github.com/linhtvdev/LearnPython.git   // Thiet lap duong dan cho Repo
+git remote show origin   // xem ten remote
+git remote  // xem thong tin remote --> co ten hien tai la origin (mac dinh)
+git remote -v  // xem url cua remote hien tai
+git remote add SharePyThon https://github.com/linhtvdev/LearnPython.git
+git add *
+git commit -m "add 2 files"
+git push
+git push -f origin master // them option -f de ep buoc ... neu phat sinh loi
