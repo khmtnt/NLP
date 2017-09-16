@@ -15,3 +15,6 @@ git add *
 git commit -m "add 2 files"
 git push
 git push -f (NLP master) // them option -f de ep buoc ... neu phat sinh loi
+// Thiet lap lai user
+git config user.name "Mr Linh"
+git config user.email "linhtvnt.tc@gmail.com"
